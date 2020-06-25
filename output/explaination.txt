@@ -1,0 +1,69 @@
+Exploring And Segmenting The Transactional dataset
+Author: Sourav Dey
+
+
+
+
+
+Workflow:
+
+* Data from the transaction_data.csv dataset is processed.
+
+* Data is cleaned , Processed for Deploying of the clustering algorithm.
+
+* The dataset contains item description , from there 3 clusters of items are made by using NLP techniques.
+
+* Some Features are extracted from the data by grouping the data of each users like total amount of purchase done by the users , Last purchase of the users , How many times the users purchased and types of products purchased by the users.
+
+* Feature Selection: Required important features are taken and others are removed such as ItemCode , TransactionId etc for clustering of customers.
+
+* Finally By using K-Means clustering the we get 4 segments.
+
+
+Explanation:
+
+1st:
+
+After Some Research I Found That There Are Two Types Of Segmentation
+
+1. Behavioural Segmentation : This segmentation includes the behaviour of customers without noticing which countries they belongs to.
+
+2. Demographic Segmentation : This segmentation groups the customer regionally.
+
+We segment customers by RFM Method where R is recency (When was the users last time purchased?) , F is frequency (How often or how many times the users purchase?) and M is monetary (How much amount they have purchased?).
+
+2nd:
+
+Data is the most important part of all Data Analytics , Machine Learning and AI.
+The dataset we get contains about 10 lakhs record where most of them are duplicates , noisy so after data cleaning we get a dataset of about 4200 unique users.
+The Clustering get more efficient as we introduce more unique users.
+
+
+3rd:
+
+Nlp Techniques Used for clustering the items:
+
+Bag Of Words:
+
+The bag-of-words model is a simplifying representation used in natural language processing and information retrieval (IR). In this model, a text (such as a sentence or a document) is represented as the bag (multiset) of its words, disregarding grammar and even word order but keeping multiplicity.
+
+For more information: https://en.wikipedia.org/wiki/Bag-of-words_model
+
+K-Means Clustering:
+
+k-means clustering is a method of vector quantization, originally from signal processing, that aims to partition n observations into k clusters in which each observation belongs to the cluster with the nearest mean (cluster centers or cluster centroid), serving as a prototype of the cluster. This results in a partitioning of the data space into Voronoi cells. It is popular for cluster analysis in data mining.
+
+For more information: https://en.wikipedia.org/wiki/K-means_clustering
+
+Elbow Method For finding number of clusters:
+
+In cluster analysis, the elbow method is a heuristic used in determining the number of clusters in a data set. The method consists of plotting the explained variation as a function of the number of clusters, and picking the elbow of the curve as the number of clusters to use.
+
+For more information: https://en.wikipedia.org/wiki/Elbow_method_(clustering)
+
+Silhouette (clustering):
+
+Silhouette refers to a method of interpretation and validation of consistency within clusters of data. The technique provides a succinct graphical representation of how well each object has been classified.
+
+For more information : https://en.wikipedia.org/wiki/Silhouette_(clustering)
+
